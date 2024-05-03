@@ -17,6 +17,7 @@ app.use(expressLayouts)
 
 // * static files 
 app.use('/css',express.static(path.join(__dirname,'node_modules', 'bootstrap' , 'dist' ,'css')))
+app.use(express.static(path.join(__dirname,'public')))
 
 // * view engine setup
 app.set("views", path.join(__dirname, 'views'))
