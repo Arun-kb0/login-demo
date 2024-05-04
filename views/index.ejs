@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <title>Document</title>
 </head>
+
 <body>
-  <div class="container">
-    <h1>index</h1>
+
+  <header id="home-header">
+    <nav class="navbar bg-success-subtle  d-flex justify-content-end  fixed-top  ">
+      <div class="nav-item px-5">
+        <button class=" btn btn-secondary " id="logout-btn">logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-5">
+
+    <div class="my-3 pt-2 d-flex  justify-content-center ">
+      <h2 class="h1 mt-5 ">Fruits</h2>
+    </div>
+    
+    <section class="contianer mt-2">
+      <table class="table table-dark table-striped  table-hover ">
+        <thead>
+          <tr class="table-secondary ">
+            <th scope="col" class=" "> sl NO </th>
+            <th scope="col" class="text-capitalize "> fruit </th>
+            <th scope="col" class="text-capitalize ">season </th>
+            <th scope="col" class="text-capitalize ">origin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% fruits.forEach(function (fruit){%>
+            <tr>
+              <td>
+                <%= fruit.serialNumber %>
+              </td>
+              <td>
+                <%= fruit.name %>
+              </td>
+              <td>
+                <%= fruit.season %>
+              </td>
+              <td>
+                <%= fruit.origin %>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </section>
+
   </div>
+
+
+  <script src="/js/homeScript.js"></script>
 </body>
+
 </html>

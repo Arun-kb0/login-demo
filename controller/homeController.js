@@ -1,6 +1,8 @@
-const homeController = (req, res) => {
+const fruits = require('../model/fruits.json')
 
-  res.render('index')
+const homeController = (req, res) => {
+  if (!req.session.authorized) return res.redirect('/auth/login')
+  res.render('index', { fruits })
 }
 
-module.exports = {homeController}
+module.exports = { homeController }

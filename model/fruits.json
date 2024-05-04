@@ -1,0 +1,62 @@
+[
+  {
+    "serialNumber": 1,
+    "name": "Apple",
+    "season": "Fall",
+    "origin": "North America"
+  },
+  {
+    "serialNumber": 2,
+    "name": "Banana",
+    "season": "Year-round",
+    "origin": "Southeast Asia"
+  },
+  {
+    "serialNumber": 3,
+    "name": "Orange",
+    "season": "Winter",
+    "origin": "Southeast Asia"
+  },
+  {
+    "serialNumber": 4,
+    "name": "Grapes",
+    "season": "Late summer to early fall",
+    "origin": "Middle East"
+  },
+  {
+    "serialNumber": 5,
+    "name": "Strawberry",
+    "season": "Spring to early summer",
+    "origin": "Europe"
+  },
+  {
+    "serialNumber": 6,
+    "name": "Pineapple",
+    "season": "Year-round",
+    "origin": "South America"
+  },
+  {
+    "serialNumber": 7,
+    "name": "Watermelon",
+    "season": "Summer",
+    "origin": "Africa"
+  },
+  {
+    "serialNumber": 8,
+    "name": "Mango",
+    "season": "Summer",
+    "origin": "South Asia"
+  },
+  {
+    "serialNumber": 9,
+    "name": "Peach",
+    "season": "Summer",
+    "origin": "China"
+  },
+  {
+    "serialNumber": 10,
+    "name": "Kiwi",
+    "season": "Fall to spring",
+    "origin": "China"
+  }
+]

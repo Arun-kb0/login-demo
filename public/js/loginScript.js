@@ -21,19 +21,26 @@ form.addEventListener('submit', (e) => {
       "Content-Type": "application/json"
     }
   })
-    .then(res => {  
-      console.log(res.status)
-      return res.json()
-    })
+    .then(res => res.json())
     .then((data) => {
       console.log(data)
-      alert(data.message)
+      if (data?.username) {
+        const username = data.username
+        localStorage.setItem("username", username)
+        return window.location.href = '/'
+      } else {
+        alert(data.message)
+      }
     })
     .catch((err) => {
-      alert(err.message)
+      console.log(err.message)
     })
 })
 
+// ***************** end ********************
+
+
+// * check email and password
 const checkEmail = () => {
   const emailValue = email.value.trim()
   if (emailValue === "") {
@@ -57,12 +64,29 @@ const checkPassword = () => {
     setSuccess(password)
   }
 }
+// ***************** end ********************
+
+
+// * cookie check
+
+// const checkCookies = () => {
+//   const username = localStorage.getItem("username")
+//   if (username) {
+//     return window.location.href = '/'
+//   }
+// }
+
+
+// ***************** end ********************
+
 
 //  * event listeners
+
 email.addEventListener('input', checkEmail)
 password.addEventListener('input', checkPassword)
+// window.onload = checkCookies
+// ***************** end ********************
 
-// * 
 
 
 const isEmail = (email) => {
